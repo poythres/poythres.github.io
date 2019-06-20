@@ -1,0 +1,468 @@
+/*@import "../node_modules/@material/switch/dist/mdc.switch.css";*/
+
+html {
+	box-sizing: border-box;
+	font-family: 'Roboto', 'Arial', sans-serif;
+	color: #53555a;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+}
+
+*,
+*:before,
+*:after {
+	box-sizing: inherit;
+}
+
+.clearfix:after {
+	display: block;
+	height: 0;
+	clear: both;
+	line-height: 0;
+	content: ".";
+	visibility: hidden;
+}
+
+/*Left-side toolbar styling*/
+
+.toolbar {
+	background-color: #fff;
+	height: 800px;
+	width: 60px;
+	border-radius: 4px 0px 0px 4px;
+	border: solid 1px #d0dde6;
+	position: absolute;
+	left: 0;
+	z-index: 20;
+}
+
+.toolbarControl {
+	background-color: #fff;
+	border: solid 1px #d0dde6;
+	border-left: 0px;
+	border-right: 0px;
+	border-top: 0px;
+	border-radius: 0px;
+	cursor: pointer;
+	padding: 12px 0px;
+	text-align: center;
+	width: 58px;
+	height: 60px;
+	color: #327f97;
+}
+
+.toolbarControl:hover {
+	color: #4C94AF;
+}
+
+.toolbarControlFirst {
+	border-radius: 4px 0px 0px 0px;
+}
+
+.toolbarIcon {
+	font-size: 18px;
+}
+
+.toolbarText {
+	font-family: Roboto, Arial, sans-serif;
+	font-size: 12px;
+	line-height: .6;
+}
+
+/*Right-side Toolbar Styling*/
+
+.toolbarRight {
+	background-color: #fff;
+	height: 800px;
+	width: 60px;
+	border-radius: 0 4px 4px 0;
+	border: solid 1px #d0dde6;
+	position: absolute;
+	right: 0px;
+	z-index: 20;
+}
+
+.toolbarControlFirstRight {
+	border-radius: 0px 4px 0px 0px;
+}
+
+/*Panel Styling*/
+
+.leftPanelBase320 {
+	width: 0px;
+	height: 800px;
+	background-color: #fff;
+	border: solid 1px #e5eaef;
+	border-left: 0;
+	border-radius: 0 4px 4px 0;
+	box-shadow: -1px 0 16px 0 rgba(116, 121, 125, 0.3);
+	position: absolute;
+	left: 60px;
+	z-index: 10;
+	transition: width .25s;
+	-webkit-transition: width .25s; /* For Safari 3.1 to 6.0 */
+	transition-timing-function: ease-out;
+}
+
+.leftPanelContent {
+	margin: 20px;
+	height: calc(100% - 90px);
+	border-radius: 0 4px 0 0;
+	width: calc(100% - 40px);
+	position: absolute;
+	top: 0;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	overflow: hidden;
+}
+
+.rightPanelBase {
+	width: 0px;
+	height: 800px;
+	background-color: #fff;
+	border: solid 1px #e5eaef;
+	border-right: 0px;
+	border-radius: 4px 0 0 4px;
+	box-shadow: -1px 0 16px 0 rgba(116, 121, 125, 0.3);
+	position: absolute;
+	right: 60px;
+	z-index: 10;
+	transition: width .25s;
+	-webkit-transition: width .25s; /* For Safari 3.1 to 6.0 */
+	transition-timing-function: ease-out;
+}
+
+.rightPanelContent {
+	margin: 20px;
+	height: calc(100% - 90px);
+	border-radius: 4px 0 0 0;
+	width: calc(100% - 40px);
+	position: absolute;
+	top: 0;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	overflow: hidden;
+}
+
+/* Panel Content */
+
+.panelHeader {
+	font-size: 18px;
+	font-weight: bold;
+	display: inline-block;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	overflow: hidden;
+}
+
+.panelHeader.normal {
+	font-weight: normal;
+}
+
+/* Left Panel Content */
+
+.leftPanelClose {
+	position: absolute;
+	top: 0;
+	right: 0;
+}
+
+/* Right Panel Content */
+
+.accountInfoContent {
+
+}
+
+.accountIcon {
+	height: 16px;
+	width: 16px;
+	border-radius: 50%;
+	background-color: #0ba283;
+	display: inline-block;
+}
+
+.accountName {
+
+}
+
+/* Buttons */
+
+.button {
+	cursor: pointer;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	text-align: center;
+	font-size: 14px;
+	padding: 17px 0;
+}
+
+.primaryButton {
+	background-color: #327f97;
+	color: #fff;
+}
+
+.secondaryButton {
+	background-color: #fff;
+	color: #327f97;
+}
+
+/* Buttons - Left Panel */
+
+.leftPanelButtonTray {
+	width: 100%;
+	height: 50px;
+	position: absolute;
+	bottom: 0;
+	border-radius: 0 0 4px 0;
+}
+
+.leftPanelSingleButton {
+	width: 100%;
+	height: 100%;
+	border-radius: 0 0 4px 0;
+}
+
+/* Buttons - Right Panel */
+
+.rightPanelButtonTray {
+	width: 100%;
+	height: 50px;
+	position: absolute;
+	bottom: 0;
+	border-radius: 0 0 0 4px;
+}
+
+.rightPanelSingleButton {
+	width: 100%;
+	height: 100%;
+	border-radius: 0 0 0 4px;
+}
+
+.rightPanelDoubleButtonLeft {
+ 	width: 50%;
+ 	height: 100%;
+ 	border-radius: 0 0 0 4px;
+}
+
+.rightPanelDoubleButtonRight {
+	height: 100%;
+ 	width: 50%;
+}
+
+/* Widget Styles */
+
+
+.toggleTabTray {
+	margin: 16px;
+	border-radius: 4px;
+	border: solid 1px #d0dde6;
+	background-color: #e5eaef;
+	height: 44px;
+}
+
+.toggleTabBase {
+	border-right: solid 1px #d0dde6;
+	float: left;
+	height: 100%;
+	text-align: center;
+	padding: 14px 0;
+	font-size: 14px;
+}
+
+.toggleTabFirst {
+	border-radius: 4px 0 0 4px;
+}
+
+.toggleTabLast {
+	border-right: none;
+	border-radius: 0 4px 4px 0;
+}
+
+.toggleTabSelected {
+	background-color: #fff;
+	color: #ed8b00;
+	font-weight: bold;
+}
+
+.toggleTabUnselected {
+	cursor: pointer;
+}
+
+.toggleTabUnselected:hover {
+	cursor: pointer;
+	color: #327f97;
+}
+
+.toggleTabHalves {
+	width: calc(100%/2);
+}
+
+.toggleTabThirds {
+	width: calc(100%/3);
+}
+
+.toggleTabFourths {
+	width: calc(100%/4);
+}
+
+/* Show/Hide/Animate/Select classes */
+
+.rightPanelBase.expanded {
+	width: 400px;
+}
+
+.leftPanelBase320.expanded {
+	width: 320px;
+}
+
+.hide {
+	display: none;
+}
+
+.selected {
+	color: #ed8b00;
+}
+
+.selected:hover {
+	color: #ed8b00;
+}
+
+.actionable {
+	color: #327f97;
+}
+
+.actionable:hover {
+	color: #4C94AF;
+	cursor: pointer;
+}
+
+/*Map Styling*/
+
+#mapPlus {
+	padding: 0;
+	margin: 12px 16px;
+	position: relative;
+}
+
+#map {
+    height: 800px;
+    width: calc(100% - 120px);
+    position: absolute;
+    left: 60px;
+    border-top: solid 1px #d0dde6;
+	border-bottom: solid 1px #d0dde6;
+}
+
+
+/* Google Material Design Icons */
+
+.material-icons.md-18 {
+	font-size: 18px;
+}
+
+.material-icons.md-32 {
+	font-size: 32px;
+	line-height: .75;
+	margin-right: -5px;
+}
+
+
+/* Toggle 1 */
+
+/*input[type=checkbox]{
+	height: 0;
+	width: 0;
+	visibility: hidden;
+}
+
+label {
+	cursor: pointer;
+	text-indent: -9999px;
+	width: 200px;
+	height: 100px;
+	background: grey;
+	display: block;
+	border-radius: 100px;
+	position: relative;
+}
+
+label:after {
+	content: '';
+	position: absolute;
+	top: 5px;
+	left: 5px;
+	width: 90px;
+	height: 90px;
+	background: #fff;
+	border-radius: 90px;
+	transition: 0.3s;
+}
+
+input:checked + label {
+	background: #bada55;
+}
+
+input:checked + label:after {
+	left: calc(100% - 5px);
+	transform: translateX(-100%);
+}
+
+label:active:after {
+	width: 130px;
+}*/
+
+/* Toggle 2 */
+
+.toggle {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  width: 62px;
+  height: 32px;
+  display: inline-block;
+  position: relative;
+  border-radius: 50px;
+  overflow: hidden;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  font-family: "Roboto";
+  font-size: 10px;
+  line-height: 28px;
+  background-color: #707070;
+  transition: background-color ease 0.3s;
+}
+
+.toggle:before {
+  content: "";
+  display: block;
+  position: absolute;
+  z-index: 2;
+  width: 28px;
+  height: 28px;
+  background: #fff;
+  left: 2px;
+  top: 2px;
+  border-radius: 50%;
+  font-family: "Roboto";
+  font-size: 10px;
+  line-height: 28px;
+  text-transform: uppercase;
+  font-weight: bold;
+  text-indent: -22px;
+  word-spacing: 37px;
+  color: #fff;
+  text-shadow: -1px -1px rgba(0,0,0,0.15);
+  white-space: nowrap;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.2);
+  transition: all cubic-bezier(0.3, 1.5, 0.7, 1) 0.3s;
+}
+
+.toggle:checked {
+  background-color: #4CD964;
+}
+
+.toggle:checked:before {
+  left: 32px;
+}

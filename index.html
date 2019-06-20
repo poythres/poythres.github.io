@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons&display=optional" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,400i,700&display=optional" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" type="text/css" href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css" />
+  <link rel="stylesheet" href="css/style.css?v=0.0.1">
+
+
+
+
+  <link href="images/favicon.png" rel="shortcut icon">
+
+
+
+  </head>
+  <body>
+
+<!--     <input type="checkbox" id="switch" /><label for="switch">Toggle</label> -->
+
+    <input class="toggle" type="checkbox" />
+
+    <div id="mapPlus">
+      <div class="toolbar">
+        <div class="toolbarControl toolbarControlFirst" id="searchToolbar">
+          <i class="material-icons">search</i> 
+          <div class="toolbarText">Search</div>
+        </div>
+        <div class="toolbarControl" id="filtersToolbar">
+          <i class="material-icons">filter_list</i> 
+          <div class="toolbarText">Filters</div>
+        </div>
+        <div class="toolbarControl" id="layersToolbar">
+          <i class="material-icons">layers</i> 
+          <div class="toolbarText">Layers</div>
+        </div>
+        <div class="toolbarControl" id="labelsToolbar">
+          <i class="material-icons">filter_1</i> 
+          <div class="toolbarText">Labels</div>
+        </div>
+        <div class="toolbarControl" id="paletteToolbar">
+          <i class="material-icons">palette</i> 
+          <div class="toolbarText">Palette</div>
+        </div>
+        <div class="toolbarControl" id="measureToolbar">
+          <i class="material-icons">space_bar</i> 
+          <div class="toolbarText">Measure</div>
+        </div>
+        <div class="toolbarControl" id="routesToolbar">
+          <i class="material-icons">directions</i> 
+          <div class="toolbarText">Routes</div>
+        </div>
+        <div class="toolbarControl" id="selectMenu">
+          <i class="material-icons">select_all</i> 
+          <div class="toolbarText">Select</div>
+        </div>
+      </div>
+
+      <div class="leftPanelBase320">
+        <div class="leftPanelContent">
+          <div class="panelHeaderRow">
+            <div class="panelHeader normal">Labels</div>
+            <i class="material-icons md-32 leftPanelClose actionable">close</i>
+          </div>
+          <div class="toggleTabTray" id="labelsToggleTab">
+            <div class="toggleTabBase toggleTabHalves toggleTabFirst toggleTabSelected">Attributes
+            </div>
+            <div class="toggleTabBase toggleTabHalves toggleTabLast toggleTabUnselected">Templates
+            </div>
+          </div>
+        </div>
+        <div class="leftPanelButtonTray">
+          <div class="leftPanelSingleButton primaryButton button">Apply</div>
+        </div>
+      </div>
+
+      <div id="map">
+      </div>
+
+      <div class="rightPanelBase">
+        <div class="rightPanelContent">
+          <div class="accountInfoContent">
+            <div class="accountTitleRow">
+              <div class="accountIcon"></div>
+              <div class="panelHeader">Arden Hill Hospital</div>
+              <div class="panelHeader normal">(Hospital)</div>
+            </div>
+            <div class="accountID">P10924200</div>
+            <div class="addressRow1">12345 Street Name Line</div>
+            <div class="addressRow2">
+              <div class="addressCityStateZip">City, ST 10924</div>
+              <div class="addressCountry">US</div>
+            </div>
+          </div>
+          <div class="currentOrgUnitRow"></div>
+            <div class="panelSubheader">Current Territory</div>
+          <div class="alignToRow"></div>
+          <div class="selectOrgUnitRow"></div>
+          <div class="nearbyOrgUnitSuggestionsRow"></div>
+          <div class="searchForOrgUnitRow"></div>
+        </div>
+        <div class="rightPanelButtonTray">
+          <div class="rightPanelSingleButton primaryButton button">Change Alignment</div>
+        </div>
+      </div>
+     
+      <div class="toolbarRight">
+        <div class="toolbarControl toolbarControlFirstRight" id="accountsToolbar">
+          <i class="material-icons">place</i> 
+          <div class="toolbarText">Accounts</div>
+        </div>
+        <div class="toolbarControl" id="geosToolbar">
+          <i class="material-icons">crop_square</i> 
+          <div class="toolbarText">Geos</div>
+        </div>
+        <div class="toolbarControl" id="territoriesToolbar">
+          <i class="material-icons">crop_free</i> 
+          <div class="toolbarText">Territories</div>
+        </div>
+      </div>
+    </div>
+    <!--Load the API from the specified URL
+    * The async attribute allows the browser to render the page while the API loads
+    * The key parameter will contain your own API key (which is not needed for this tutorial)
+    * The callback parameter executes the initMap() function
+    -->
+    <script src="js/jquery-2.1.3.js"></script>
+    <script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"></script>
+<!--     <script src="node_modules/@material/switch/dist/mdc.switch.js"></script> -->
+    <script src="js/main.js"></script>
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBbWT_Edd45gH-n-y77iIGl6dJk6YsF4qY&callback=initMap">
+    </script>
+  </body>
+</html>
