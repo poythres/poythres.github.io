@@ -22,6 +22,10 @@ var mapMarkers = [
   [40.75, -74.18]
 ];
 
+// Define the LatLng coordinates for the polygon.
+
+// Construct the polygon.
+
 var account = {
   name: "Arden Hill Hospital",
   address: "123 Main St",
@@ -71,7 +75,7 @@ function initMap() {
 
   var i;
   for (i=0; i<mapMarkers.length; i++) {
-    new google.maps.Marker({
+    var tempMarker = new google.maps.Marker({
       position: {
         lat: mapMarkers[i][0], 
         lng: mapMarkers[i][1]
@@ -84,7 +88,26 @@ function initMap() {
       },
       icon: icon
     });
+    tempMarker.addListener('click', showAccount);
   }
+
+  var triangleCoords = [
+    {lat: 40.7, lng: -74.3},
+    {lat: 40.8, lng: -74.15},
+    {lat: 40.5, lng: -74.0}
+  ];
+
+  var fakeTerr = new google.maps.Polygon({
+    paths: triangleCoords,
+    strokeColor: '#4E90D9',
+    strokeOpacity: 0.8,
+    strokeWeight: 3,
+    fillColor: '#4E90D9',
+    fillOpacity: 0.35,
+    map: map
+  });
+
+  fakeTerr.addListener('click', showAccount);
 
   // // The marker, positioned at Newark
   // var marker = new google.maps.Marker({
@@ -102,6 +125,13 @@ function initMap() {
 }
 
 
+
+function showAccount(event) {
+  $("#accountsToolbar").addClass("selected");
+  $("#geosToolbar").removeClass("selected");
+  $("#territoriesToolbar").removeClass("selected");
+  $(".rightPanelBase").addClass("expanded");
+};
 
 
 $("#accountsToolbar").on("click", function () {
