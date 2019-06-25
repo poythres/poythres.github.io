@@ -337,6 +337,20 @@ html {
 	cursor: pointer;
 }
 
+.singleAttribute {
+	margin-top: 24px;
+}
+
+.toggleTray {
+	float: right;
+}
+
+.attributeLabel {
+	float: left;
+	line-height: 2.5;
+	font-size: 14px;
+}
+
 /*Map Styling*/
 
 #mapPlus {
