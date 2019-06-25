@@ -339,15 +339,19 @@ html {
 
 .singleAttribute {
 	margin-top: 24px;
+	display: block;
+	width: 100%;
+	height: 24px;
 }
 
 .toggleTray {
-	float: right;
+	position: absolute;
+	right: 0;
 }
 
 .attributeLabel {
 	float: left;
-	line-height: 2.5;
+	line-height: 2.8;
 	font-size: 14px;
 }
 
